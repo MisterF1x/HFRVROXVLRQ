@@ -1,0 +1,79 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 12px;
+  background-color: var(--gray-color);
+  @media screen and (min-width: 768px) {
+    padding: 36px 24px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 48px;
+  }
+  & .btn {
+    font-family: inherit;
+    align-self: flex-end;
+    margin-top: 16px;
+    @media screen and (min-width: 1280px) {
+      margin-top: 32px;
+    }
+  }
+  &__input-field {
+    position: relative;
+
+    & input,
+    & textarea {
+      font-size: 18px;
+      font-style: normal;
+      letter-spacing: -0.72px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid var(--primary-color);
+      &:placeholder-shown {
+        color: #bdbdbd;
+      }
+      @media screen and (min-width: 1280px) {
+        font-size: 20px;
+        letter-spacing: -0.8px;
+      }
+    }
+    & input {
+      height: 28px;
+      @media screen and (min-width: 1280px) {
+        height: 30px;
+      }
+    }
+    & textarea {
+      resize: none;
+      height: 142px;
+      @media screen and (min-width: 1280px) {
+        height: 144px;
+      }
+    }
+    &:not(:first-child) {
+      margin-top: 28px;
+    }
+    & label {
+      letter-spacing: -0.64px;
+      margin-bottom: 8px;
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 12px;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+  }
+}
+input.error {
+  border-bottom: 1px solid var(--error-color);
+}
+.error {
+  &-message {
+    position: absolute;
+    color: var(--error-color);
+    font-size: 12px;
+    letter-spacing: -0.48px;
+    bottom: -23px;
+    right: 0;
+  }
+}

@@ -1,0 +1,65 @@
+.accordion {
+  border-top: 1px solid var(--primary-color);
+  padding: 16px 0;
+  &:last-child {
+    border-bottom: 1px solid var(--primary-color);
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 24px 0;
+  }
+  &__container {
+    @media screen and (min-width: 768px) {
+      flex: 1;
+    }
+  }
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @media screen and (min-width: 1280px) {
+      gap: 24px;
+    }
+  }
+  &__title {
+    font-family: Fira Sans;
+    font-size: 18px;
+    letter-spacing: -0.72px;
+    text-transform: none;
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+      letter-spacing: -0.96px;
+    }
+  }
+  &__icon {
+    color: var(--primary-color);
+    & svg {
+      height: 16px;
+      width: 16px;
+      @media screen and (min-width: 1280px) {
+        height: 24px;
+        width: 24px;
+      }
+    }
+    &-open {
+      color: var(--primary-dark-color);
+    }
+  }
+  &__content {
+    font-size: 14px;
+    letter-spacing: -0.56px;
+    padding-left: 24px;
+    padding-top: 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all var(--transition-duration) var(--transition-easing);
+    &-open {
+      max-height: 300px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
+      letter-spacing: -0.64px;
+      padding-left: 52px;
+      padding-top: 24px;
+    }
+  }
+}

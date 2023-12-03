@@ -1,0 +1,19 @@
+.header {
+  &__link {
+    display: flex;
+    align-self: flex-start;
+    &:hover,
+    &:focus {
+      & .header__logo {
+        & .text-logo {
+          fill: var(--primary-color);
+        }
+      }
+    }
+  }
+  &__logo {
+    & .text-logo {
+      transition: all var(--transition-duration) var(--transition-easing);
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.btn {
+  display: inline-flex;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary-dark-color);
+  letter-spacing: -0.64px;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-duration) var(--transition-easing);
+
+  &__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    background-color: var(--primary-dark-color);
+    border-radius: 50%;
+    transition: all var(--transition-duration) var(--transition-easing);
+
+    & svg {
+      width: 9px;
+      height: 9px;
+      transform: rotate(90deg);
+    }
+    & .wrapper {
+      display: flex;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:hover {
+    color: var(--primary-color);
+    background-color: var(--primary-dark-color);
+
+    & .btn__circle {
+      background-color: var(--primary-color);
+      & .wrapper {
+        animation: slide-down var(--transition-duration) var(--transition-delay)
+          var(--transition-easing);
+      }
+    }
+  }
+}
+
+// OUTLINE BUTTON  STYLE
+
+.btn.outline {
+  padding: 3px 4px 3px 16px;
+  border: 1px solid var(--primary-color);
+  background-color: initial;
+  line-height: 1.12;
+  letter-spacing: -0.64px;
+
+  & .btn__circle {
+    width: 32px;
+    height: 32px;
+    background-color: var(--primary-color);
+    & svg {
+      width: 16px;
+      height: 16px;
+      transform: none;
+    }
+  }
+
+  &:hover {
+    background-color: var(--primary-dark-color);
+    border-color: var(--primary-dark-color);
+
+    & .btn__circle {
+      background-color: var(--primary-color);
+      & .wrapper {
+        animation: slide-left var(--transition-duration) var(--transition-delay)
+          var(--transition-easing);
+      }
+    }
+  }
+}
+
+// Keyframes animation
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50%,
+  to {
+    opacity: 1;
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50%,
+  to {
+    opacity: 1;
+  }
+  to {
+    transform: none;
+  }
+}

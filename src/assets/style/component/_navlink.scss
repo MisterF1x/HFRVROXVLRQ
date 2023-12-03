@@ -1,0 +1,35 @@
+.navigation {
+  &__link {
+    transition: color var(--transition-duration) var(--transition-easing);
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      & svg {
+        & > path {
+          stroke: #fff;
+        }
+      }
+    }
+    & svg {
+      width: 16px;
+      height: 16px;
+      transform: rotate(-45deg);
+      margin-left: 8px;
+      & > path {
+        transition: stroke var(--transition-duration) var(--transition-easing);
+        stroke: var(--gray-color-25);
+      }
+    }
+  }
+  &__active-link {
+    color: var(--primary-color);
+    & svg {
+      transform: rotate(-45deg);
+      margin-left: 8px;
+      & > path {
+        stroke: var(--primary-color);
+      }
+    }
+  }
+}

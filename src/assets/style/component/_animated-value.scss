@@ -1,0 +1,40 @@
+.feature {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__paragraph {
+    color: var(--primary-color);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    width: 265px;
+    @media screen and (min-width: 768px) {
+      width: 548px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 894px;
+    }
+    & + span {
+      text-transform: initial;
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--primary-dark-color);
+      margin-left: 8px;
+      @media screen and (min-width: 768px) {
+        font-size: 28px;
+        margin-left: 24px;
+      }
+      @media screen and (min-width: 1280px) {
+        font-size: 48px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 100px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 164px;
+    }
+  }
+}

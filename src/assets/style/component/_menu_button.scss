@@ -1,0 +1,22 @@
+.menu-button {
+  display: inline-flex;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--primary-light-color);
+  border-color: transparent;
+  border-radius: 50%;
+  transition: background-color var(--transition-duration)
+    var(--transition-easing);
+
+  & svg {
+    width: 16px;
+    height: 16px;
+  }
+  &:hover,
+  &:focus {
+    background-color: var(--primary-color);
+  }
+}

@@ -1,0 +1,54 @@
+.close-button {
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 1.5px;
+    background-color: var(--gray-color-25);
+    transition: background-color var(--transition-duration)
+      var(--transition-easing);
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--primary-transparent-25-color);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 12;
+  & > .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    --backdrop-padding: 40px;
+    padding-right: var(--backdrop-padding);
+    justify-content: end;
+  }
+}

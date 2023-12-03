@@ -1,8 +1,8 @@
 # React + Vite
 
-This repository contains the source code for the Ecosolution Green website,
-which aims to promote environmentally friendly solutions and sustainable
-practices.
+This repository hosts the source code for the Ecosolution Green website,
+dedicated to advocating and advancing environmentally sustainable energy
+solutions.
 
 ## About
 
@@ -25,4 +25,5 @@ for a brighter, greener future.
 
 This project is licensed under the [MIT License](link_to_license_file) - see the
 LICENSE file for details.
+
 # Green website
