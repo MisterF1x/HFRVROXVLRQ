@@ -8,7 +8,11 @@ export const ScrollToTopButton = () => {
     });
   };
   return (
-    <button className="footer__up-btn" onClick={handleScrollToTop}>
+    <button
+      className="footer__up-btn"
+      onClick={handleScrollToTop}
+      aria-label="Scroll to top"
+    >
       <ArrowRightIcon />
     </button>
   );

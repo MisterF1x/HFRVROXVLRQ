@@ -10,7 +10,11 @@ export const SliderCard = ({ slidesInfo }) => {
 
   return (
     <article className="slider-card">
-      <a href={link} className="slider-card__link" aria-label={title}>
+      <a
+        href={link}
+        className="slider-card__link"
+        aria-label={`Read more about ${title}`}
+      >
         <picture>
           <source
             srcSet={`${imgSrc.lg} 1x, ${imgSrc.lgX2} 2x`}
@@ -31,7 +35,7 @@ export const SliderCard = ({ slidesInfo }) => {
         <div className="slider-card__wrapper">
           <div className="slider-card__heading">
             <h3 className="slider-card__title">{title}</h3>
-            <span className="slider-card__circle-btn" aria-hidden="true">
+            <span className="slider-card__circle-btn">
               <ArrowRightIcon />
             </span>
           </div>
