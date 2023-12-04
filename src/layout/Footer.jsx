@@ -21,7 +21,9 @@ export const Footer = () => {
               <SocialList />
             </div>
             <div className="footer__right-content-bottom">
-              <a href="email:office@ecosolution.com">{contactInfo.email}</a>
+              <a href="email:office@ecosolution.com?subject=Mail from Our Site">
+                {contactInfo.email}
+              </a>
               <p className="footer__copyright">
                 {contactInfo.name} © {currentYear}
               </p>

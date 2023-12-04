@@ -2,9 +2,9 @@ import { Button } from '@components/Button';
 import { AccordionContainer } from '../components/AccordionContainer';
 import { accordionItems } from '../data/constant';
 
-export const FaqSection = () => {
+export const FaqSection = ({ id }) => {
   return (
-    <section className="section faq">
+    <section id={id} className="section faq">
       <div className="container">
         <div className="faq__heading-wrapper">
           <h2 className="faq__title">Frequently Asked Questions</h2>
