@@ -6,6 +6,9 @@
     @media screen and (min-width: 768px) {
       flex: 1;
     }
+    @media screen and (min-width: 1280px) {
+      justify-content: flex-end;
+    }
   }
   &__total-slides {
     color: var(--primary-transparent-25-color);
@@ -17,6 +20,9 @@
       min-width: 29px;
       display: inline-flex;
       color: var(--primary-dark-color);
+    }
+    @media screen and (min-width: 1280px) {
+      margin-right: 193px;
     }
   }
   &__nav {

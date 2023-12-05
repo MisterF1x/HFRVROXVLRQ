@@ -16,6 +16,7 @@ export const SliderSection = ({ id }) => {
             </h2>
           </div>
           <ControlSliderPanel index={realIndex} swiperRef={swiperRef} />
+          <div className="slider-section__line"></div>
         </div>
         <Slider onChange={setRealIndex} swiperRef={swiperRef} />
       </div>

@@ -18,8 +18,8 @@ export const Header = ({ id }) => {
         <div className="container">
           <Logo />
           <div className="header__group-btn">
-            <Button href="#contact-us">Get in touch</Button>
             <MenuButton onClick={handleToggle} />
+            <Button href="#contact-us">Get in touch</Button>
           </div>
         </div>
         {open ? (
