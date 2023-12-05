@@ -1,0 +1,22 @@
+.scrollup-btn {
+  position: absolute;
+  top: calc(var(--padding) + 8px);
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: none;
+  transition: all var(--transition-duration) var(--transition-easing);
+  & svg {
+    transform: rotate(-90deg);
+  }
+  &:hover {
+    background-color: var(--primary-dark-color);
+    & path {
+      stroke: var(--primary-color);
+    }
+  }
+}
