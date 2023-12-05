@@ -7,10 +7,12 @@ export const FaqSection = ({ id }) => {
     <section id={id} className="section faq">
       <div className="container">
         <div className="faq__heading-wrapper">
-          <h2 className="faq__title">Frequently Asked Questions</h2>
-          <div className="faq__contact-us">
-            <p>Didn&apos;t find the answer to your question? </p>
-            <Button href="#contact-us">Contact Us</Button>
+          <div>
+            <h2 className="faq__title">Frequently Asked Questions</h2>
+            <div className="faq__contact-us">
+              <p>Didn&apos;t find the answer to your question? </p>
+              <Button href="#contact-us">Contact Us</Button>
+            </div>
           </div>
         </div>
         <AccordionContainer items={accordionItems} />
