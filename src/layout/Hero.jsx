@@ -3,14 +3,7 @@ import { contactInfo } from '../data/constant';
 import VideoWindmill from '../assets/video/windmill.mp4';
 import VideoWindmillSmall from '../assets/video/windmill_sm.mp4';
 import useResize from '../hooks/useResize';
-import { useEffect, useLayoutEffect, useRef } from 'react';
-// import { gsap } from 'gsap';
-// import smImg from '../assets/images/sm/webp/hero.webp';
-// import smImgx2 from '../assets/images/sm/webp/hero@2.webp';
-// import mdImg from '../assets/images/md/webp/hero.webp';
-// import mdImgx2 from '../assets/images/md/webp/hero@2.webp';
-// import lgImg from '../assets/images/lg/webp/hero.webp';
-// import lgImgx2 from '../assets/images/lg/webp/hero@2.webp';
+import { useEffect, useRef } from 'react';
 
 export const Hero = () => {
   const currentYear = new Date().getFullYear();
@@ -20,19 +13,6 @@ export const Hero = () => {
   useEffect(() => {
     videoSrc.current = width > 768 ? VideoWindmill : VideoWindmillSmall;
   }, [width]);
-
-  // useLayoutEffect(() => {
-  //   let ctx = gsap.context(() => {
-  //     // all your animations go in here...
-  //     gsap.from('.hero__title', {
-  //       duration: 0.5,
-  //       yPercent: 100,
-  //       opacity: 0,
-  //     });
-  //   }); // <- scopes all selector text to the root element
-
-  //   return () => ctx.revert();
-  // }, []);
 
   return (
     <section className="hero section">
@@ -68,23 +48,6 @@ export const Hero = () => {
             <source src={videoSrc?.current} type="video/mp4" />
           </video>
         </div>
-        {/* <picture>
-          <source
-            srcSet={`${lgImg} 1x, ${lgImgx2} 2x`}
-            media="(min-width: 1280px)"
-          />
-          <source
-            srcSet={`${mdImg} 1x, ${mdImgx2} 2x`}
-            media="(min-width: 768px)"
-          />
-          <img
-            className="hero__img"
-            srcSet={`${smImg} 1x, ${smImgx2} 2x`}
-            src={smImg}
-            alt={contactInfo.name}
-            width="480"
-          />
-        </picture> */}
       </div>
     </section>
   );
