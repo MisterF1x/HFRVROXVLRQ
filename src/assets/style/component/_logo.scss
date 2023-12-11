@@ -2,6 +2,8 @@
   &__link {
     display: flex;
     align-self: flex-start;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    transform: scale(1);
     &:hover,
     &:focus {
       & .header__logo {

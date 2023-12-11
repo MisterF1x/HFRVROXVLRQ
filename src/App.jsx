@@ -16,7 +16,7 @@ function App() {
         <About id="about" />
         <Feature />
         <SliderSection id="cases" />
-        <FaqSection id="faq"/>
+        <FaqSection id="faq" />
         <ContactSection id="contact-us" />
       </main>
       <Footer />

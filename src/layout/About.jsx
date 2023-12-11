@@ -12,16 +12,22 @@ import lgWImg from '../assets/images/lg/webp/work2.webp';
 import lgWImgx2 from '../assets/images/lg/webp/work2@2.webp';
 import { contactInfo } from '../data/constant';
 import { AboutCard } from '@components/AboutCard';
+import { useLayoutEffect } from 'react';
+import { animateAboutSection, createScrollTrigger } from '../libs/gsap';
 
 export const About = ({ id }) => {
+  useLayoutEffect(() => {
+    const aboutAnimation = animateAboutSection();
+    createScrollTrigger('#about', aboutAnimation);
+    return () => {
+      aboutAnimation.kill();
+    };
+  }, []);
   return (
     <section id={id} className="about section">
       <div className="container">
         <div className="about__heading section__title">
-          {/* <div> */}
           <h2 className="about__title">Main values of our company</h2>
-          {/* </div> */}
-          {/* <div> */}
           <p className="about__paragraph">
             EcoSolution envisions a world where sustainable energy solutions
             power a brighter and cleaner future for all. We aspire to be at the
@@ -29,7 +35,6 @@ export const About = ({ id }) => {
             way in innovative technologies that harness the power of nature to
             meet the world`s energy needs.
           </p>
-          {/* </div> */}
           <div className="about__heading-line"></div>
         </div>
         <ul className="card-list">

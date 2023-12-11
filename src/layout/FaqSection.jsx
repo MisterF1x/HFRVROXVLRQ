@@ -1,8 +1,17 @@
 import { Button } from '@components/Button';
 import { AccordionContainer } from '../components/AccordionContainer';
 import { accordionItems } from '../data/constant';
+import { useLayoutEffect } from 'react';
+import { animateFaqSection, createScrollTrigger } from '../libs/gsap';
 
 export const FaqSection = ({ id }) => {
+  useLayoutEffect(() => {
+    const faqAnimation = animateFaqSection();
+    createScrollTrigger('#faq', faqAnimation);
+    return () => {
+      faqAnimation.kill();
+    };
+  }, []);
   return (
     <section id={id} className="section faq">
       <div className="container">

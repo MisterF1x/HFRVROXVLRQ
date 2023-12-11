@@ -1,7 +1,17 @@
 import { ConactForm } from '@components/ContactForm';
 import { ContactInformation } from '@components/ContactInformation';
+import { useLayoutEffect } from 'react';
+import { animateContactSection, createScrollTrigger } from '../libs/gsap';
 
 export const ContactSection = ({ id }) => {
+  useLayoutEffect(() => {
+    const contactAnimation = animateContactSection();
+    createScrollTrigger('#contact-us', contactAnimation);
+    return () => {
+      contactAnimation.kill();
+    };
+  }, []);
+
   return (
     <section id={id} className="section section-contact">
       <div className="container">

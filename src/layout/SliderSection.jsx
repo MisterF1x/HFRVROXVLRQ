@@ -1,10 +1,19 @@
 import { Slider } from '@components/Slider';
-import { useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import { ControlSliderPanel } from '@components/ControlSliderPanel';
+import { animateCasesSection, createScrollTrigger } from '../libs/gsap';
 
 export const SliderSection = ({ id }) => {
   const [realIndex, setRealIndex] = useState(0);
   const swiperRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const casesAnimation = animateCasesSection();
+    createScrollTrigger('#cases', casesAnimation);
+    return () => {
+      casesAnimation.kill();
+    };
+  }, []);
 
   return (
     <section id={id} className="slider-section section">
