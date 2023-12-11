@@ -1,14 +1,39 @@
 import { Button } from '@components/Button';
 import { contactInfo } from '../data/constant';
-import smImg from '../assets/images/sm/webp/hero.webp';
-import smImgx2 from '../assets/images/sm/webp/hero@2.webp';
-import mdImg from '../assets/images/md/webp/hero.webp';
-import mdImgx2 from '../assets/images/md/webp/hero@2.webp';
-import lgImg from '../assets/images/lg/webp/hero.webp';
-import lgImgx2 from '../assets/images/lg/webp/hero@2.webp';
+import VideoWindmill from '../assets/video/windmill.mp4';
+import VideoWindmillSmall from '../assets/video/windmill_sm.mp4';
+import useResize from '../hooks/useResize';
+import { useEffect, useLayoutEffect, useRef } from 'react';
+// import { gsap } from 'gsap';
+// import smImg from '../assets/images/sm/webp/hero.webp';
+// import smImgx2 from '../assets/images/sm/webp/hero@2.webp';
+// import mdImg from '../assets/images/md/webp/hero.webp';
+// import mdImgx2 from '../assets/images/md/webp/hero@2.webp';
+// import lgImg from '../assets/images/lg/webp/hero.webp';
+// import lgImgx2 from '../assets/images/lg/webp/hero@2.webp';
 
 export const Hero = () => {
   const currentYear = new Date().getFullYear();
+  const width = useResize();
+  const videoSrc = useRef(VideoWindmillSmall);
+
+  useEffect(() => {
+    videoSrc.current = width > 768 ? VideoWindmill : VideoWindmillSmall;
+  }, [width]);
+
+  // useLayoutEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     // all your animations go in here...
+  //     gsap.from('.hero__title', {
+  //       duration: 0.5,
+  //       yPercent: 100,
+  //       opacity: 0,
+  //     });
+  //   }); // <- scopes all selector text to the root element
+
+  //   return () => ctx.revert();
+  // }, []);
+
   return (
     <section className="hero section">
       <div className="container hero__container">
@@ -38,7 +63,12 @@ export const Hero = () => {
             </p>
           </div>
         </div>
-        <picture>
+        <div className="hero__video">
+          <video autoPlay muted loop playsInline>
+            <source src={videoSrc?.current} type="video/mp4" />
+          </video>
+        </div>
+        {/* <picture>
           <source
             srcSet={`${lgImg} 1x, ${lgImgx2} 2x`}
             media="(min-width: 1280px)"
@@ -54,7 +84,7 @@ export const Hero = () => {
             alt={contactInfo.name}
             width="480"
           />
-        </picture>
+        </picture> */}
       </div>
     </section>
   );
