@@ -33,14 +33,6 @@ import mdZaporizhyax2 from '../assets/images/md/webp/zaporizhya@2.webp';
 import lgZaporizhya from '../assets/images/lg/webp/zaporizhya.webp';
 import lgZaporizhyax2 from '../assets/images/lg/webp/zaporizhya@2.webp';
 
-export const contactInfo = Object.freeze({
-  name: 'ecosolution',
-  address: '79005, Ukraine, Lvivstreet. Shota Rustaveli, 7',
-  email: 'office@ecosolution.com',
-  phone: '38 (098) 12 34 567',
-  otherPhone: '38 (093) 12 34 567',
-});
-
 export const slidesInfo = [
   {
     id: 'j2-3h4j',
@@ -118,56 +110,6 @@ export const slidesInfo = [
     link: '#post5',
   },
 ];
-
-export const accordionItems = [
-  {
-    id: 'adsa-sd8723',
-    title:
-      'How do wind turbines and solar panels work together in a renewable energy system?',
-    content:
-      'Wind turbines and solar panels generate electricity through different mechanisms. Wind turbines harness the kinetic energy of the wind to turn blades, which then drive a generator. Solar panels convert sunlight into electricity through the photovoltaic effect. When integrated into a renewable energy system, these technologies complement each other by providing a continuous and reliable power supply. Wind power is often more abundant during certain times, while solar power is consistent during daylight hours, resulting in a more stable overall energy output.',
-  },
-  {
-    id: 'a2sa-sasd23',
-    title:
-      'What sets EcoSolution`s renewable energy solutions apart from others on the market?',
-    content:
-      'Wind turbines and solar panels generate electricity through different mechanisms. Wind turbines harness the kinetic energy of the wind to turn blades, which then drive a generator. Solar panels convert sunlight into electricity through the photovoltaic effect. When integrated into a renewable energy system, these technologies complement each other by providing a continuous and reliable power supply. Wind power is often more abundant during certain times, while solar power is consistent during daylight hours, resulting in a more stable overall energy output.',
-  },
-  {
-    id: 'a26a-sasd23',
-    title:
-      'How can businesses and communities benefit from integrating renewable energy solutions from EcoSolution?',
-    content:
-      'Wind turbines and solar panels generate electricity through different mechanisms. Wind turbines harness the kinetic energy of the wind to turn blades, which then drive a generator. Solar panels convert sunlight into electricity through the photovoltaic effect. When integrated into a renewable energy system, these technologies complement each other by providing a continuous and reliable power supply. Wind power is often more abundant during certain times, while solar power is consistent during daylight hours, resulting in a more stable overall energy output.',
-  },
-  {
-    id: 'aw6a-ssde423',
-    title:
-      'What measures does EcoSolution take to ensure the environmental sustainability of its products?',
-    content:
-      'Wind turbines and solar panels generate electricity through different mechanisms. Wind turbines harness the kinetic energy of the wind to turn blades, which then drive a generator. Solar panels convert sunlight into electricity through the photovoltaic effect. When integrated into a renewable energy system, these technologies complement each other by providing a continuous and reliable power supply. Wind power is often more abundant during certain times, while solar power is consistent during daylight hours, resulting in a more stable overall energy output.',
-  },
-  {
-    id: 'a26a-sssdg723',
-    title:
-      'How does EcoSolution engage with local communities and support a just transition to renewable energy?',
-    content:
-      'Wind turbines and solar panels generate electricity through different mechanisms. Wind turbines harness the kinetic energy of the wind to turn blades, which then drive a generator. Solar panels convert sunlight into electricity through the photovoltaic effect. When integrated into a renewable energy system, these technologies complement each other by providing a continuous and reliable power supply. Wind power is often more abundant during certain times, while solar power is consistent during daylight hours, resulting in a more stable overall energy output.',
-  },
-];
-
-export const validationRules = Object.freeze({
-  fullname: { required: true, minLength: 5, maxLength: 20 },
-  email: {
-    required: true,
-    pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-  },
-  phone: { required: true, pattern: /^380\d{9}$/ },
-  text: {
-    required: false,
-  },
-});
 
 export const links = [
   {

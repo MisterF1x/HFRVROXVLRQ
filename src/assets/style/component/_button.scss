@@ -30,7 +30,7 @@
     }
   }
 
-  &:active {
+  &:not(.loading):active {
     transform: scale(0.95);
   }
 
@@ -68,7 +68,7 @@
     }
   }
 
-  &:hover {
+  &:not(.loading):hover {
     background-color: var(--primary-dark-color);
     border-color: var(--primary-dark-color);
 
@@ -80,6 +80,12 @@
       }
     }
   }
+  &.loading {
+    padding: 0;
+  }
+}
+.form .outline {
+  min-width: 105px;
 }
 
 // Keyframes animation

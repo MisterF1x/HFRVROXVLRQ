@@ -1,10 +1,10 @@
-import { slidesInfo } from '../data/constant';
-import { SliderCard } from './SliderCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, A11y } from 'swiper/modules';
+import useResize from '../hooks/useResize';
+import { SliderCard } from './SliderCard';
+import { slidesInfo } from '../data/constant';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import useResize from '../hooks/useResize';
 
 export const Slider = ({ swiperRef, onChange }) => {
   const width = useResize();

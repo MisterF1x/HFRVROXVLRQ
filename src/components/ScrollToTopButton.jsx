@@ -9,6 +9,7 @@ export const ScrollToTopButton = () => {
   };
   return (
     <button
+      type="button"
       className="scrollup-btn"
       onClick={handleScrollToTop}
       aria-label="Scroll to top"

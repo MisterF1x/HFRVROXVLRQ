@@ -33,7 +33,7 @@
     }
     &:hover {
       & svg {
-        color: var(--primary-color);
+        fill: var(--primary-color);
       }
     }
     @media screen and (min-width: 1280px) {

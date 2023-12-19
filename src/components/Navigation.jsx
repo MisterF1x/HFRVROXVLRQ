@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { links } from '../data/constant';
 import { NavLink } from './NavLink';
 import { SocialList } from './SocialList';
+import { links } from '../data/constant';
 
 export const Navigation = ({ onClose }) => {
   const [activeLink, setActiveLink] = useState(null);

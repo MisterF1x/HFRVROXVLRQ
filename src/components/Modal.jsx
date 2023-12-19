@@ -1,6 +1,6 @@
+import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Backdrop } from './Backdrop';
-import { useEffect } from 'react';
 
 const modalRoot = document.getElementById('modal-root');
 

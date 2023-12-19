@@ -25,6 +25,7 @@ export const SliderCard = ({ slidesInfo }) => {
             media="(min-width: 768px)"
           />
           <img
+            loading="lazy"
             className="slider-card__img"
             srcSet={`${imgSrc.sm} 1x, ${imgSrc.smX2} 2x`}
             src={imgSrc.sm}

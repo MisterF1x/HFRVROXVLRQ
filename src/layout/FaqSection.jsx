@@ -1,8 +1,8 @@
-import { Button } from '@components/Button';
-import { AccordionContainer } from '../components/AccordionContainer';
-import { accordionItems } from '../data/constant';
-import { useLayoutEffect } from 'react';
 import { animateFaqSection, createScrollTrigger } from '../libs/gsap';
+import { useLayoutEffect } from 'react';
+import { Button } from '@components/Button';
+import { AccordionContainer } from '@components/AccordionContainer';
+import dataJson from '../data/pageData.json';
 
 export const FaqSection = ({ id }) => {
   useLayoutEffect(() => {
@@ -17,16 +17,16 @@ export const FaqSection = ({ id }) => {
       <div className="container">
         <div className="faq__heading-wrapper">
           <div>
-            <h2 className="faq__title">Frequently Asked Questions</h2>
+            <h2 className="faq__title">{dataJson?.faq?.title}</h2>
             <div className="faq__contact-us">
-              <p>Didn&apos;t find the answer to your question? </p>
+              <p>{dataJson?.faq?.question}</p>
               <Button href="#contact-us">Contact Us</Button>
             </div>
           </div>
         </div>
-        <AccordionContainer items={accordionItems} />
+        <AccordionContainer items={dataJson?.faq?.accordionItems} />
         <div className="faq__contact-us">
-          <p>Didn&apos;t find the answer to your question? </p>
+          <p>{dataJson?.faq?.question}</p>
           <Button href="#contact-us">Contact Us</Button>
         </div>
       </div>

@@ -30,10 +30,23 @@
       gap: 48px;
     }
   }
-  &__contact-info,
-  &__form {
+  &__contact-info {
     @media screen and (min-width: 768px) {
       flex: 1;
+    }
+  }
+  &__form {
+    display: flex;
+    min-height: 440px;
+    padding: 36px 12px;
+    @media screen and (min-width: 768px) {
+      flex: 1;
+      min-height: 560px;
+      padding: 36px 24px;
+    }
+    @media screen and (min-width: 1280px) {
+      min-height: 624px;
+      padding: 48px;
     }
   }
 }

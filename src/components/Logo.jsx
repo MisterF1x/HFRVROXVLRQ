@@ -1,6 +1,6 @@
+import { gsap } from 'gsap';
 import { useLayoutEffect } from 'react';
 import LOGO from '../assets/images/logo.svg?react';
-import { gsap } from 'gsap';
 
 export const Logo = () => {
   useLayoutEffect(() => {

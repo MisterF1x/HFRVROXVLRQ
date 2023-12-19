@@ -1,7 +1,7 @@
 import { Logo } from '@components/Logo';
 import { SocialList } from '@components/SocialList';
-import { contactInfo } from '../data/constant';
 import { ScrollToTopButton } from '@components/ScrollToTopButton';
+import dataJson from '../data/pageData.json';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,7 +14,7 @@ export const Footer = () => {
             <Logo />
             <ScrollToTopButton />
             <SocialList />
-            <p className="footer__address">{contactInfo.address}</p>
+            <p className="footer__address">{dataJson?.contactInfo.address}</p>
           </div>
           <div className="footer__right-content">
             <div className="footer__right-content-top">
@@ -22,10 +22,10 @@ export const Footer = () => {
             </div>
             <div className="footer__right-content-bottom">
               <a href="email:office@ecosolution.com?subject=Mail from Our Site">
-                {contactInfo.email}
+                {dataJson?.contactInfo.email}
               </a>
               <p className="footer__copyright">
-                {contactInfo.name} © {currentYear}
+                {dataJson?.contactInfo.name} © {currentYear}
               </p>
             </div>
           </div>

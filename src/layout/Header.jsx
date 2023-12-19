@@ -1,10 +1,10 @@
+import { useState } from 'react';
+import { useScroll } from '../hooks/useScroll';
 import { Button } from '@components/Button';
 import { MenuButton } from '@components/MenuButton';
 import { Logo } from '@components/Logo';
-import { Navigation } from '../components/Navigation';
+import { Navigation } from '@components/Navigation';
 import { Modal } from '@components/Modal';
-import { useState } from 'react';
-import { useScroll } from '../hooks/useScroll';
 
 export const Header = ({ id }) => {
   const [open, setOpen] = useState(false);

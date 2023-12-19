@@ -1,20 +1,41 @@
 .form {
   display: flex;
   flex-direction: column;
-  padding: 36px 12px;
-  // background-color: var(--gray-color);
-  @media screen and (min-width: 768px) {
-    padding: 36px 24px;
-  }
-  @media screen and (min-width: 1280px) {
-    padding: 48px;
-  }
+  flex: 1;
   & .btn {
     font-family: inherit;
     align-self: flex-end;
     margin-top: 16px;
+    height: 40px;
     @media screen and (min-width: 1280px) {
       margin-top: 32px;
+    }
+    &.onclick {
+      width: 40px;
+      border-color: #cecece;
+      border-width: 3px;
+      font-size: 0;
+      border-left-color: var(--primary-dark-color);
+      animation: rotating 2s 0.25s linear infinite;
+      & > * {
+        display: none;
+      }
+    }
+    &.validate {
+      font-size: 16px;
+      color: white;
+      background: var(--primary-color);
+      padding: 0;
+      min-width: 120px;
+    }
+
+    @keyframes rotating {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
   }
   &__input-field {

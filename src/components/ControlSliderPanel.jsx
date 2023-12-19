@@ -1,5 +1,5 @@
-import ArrowRightIcon from '../assets/icons/arrow-right.svg?react';
 import { slidesInfo } from '../data/constant';
+import ArrowRightIcon from '../assets/icons/arrow-right.svg?react';
 
 export const ControlSliderPanel = ({ swiperRef, index }) => {
   const totalSliders =

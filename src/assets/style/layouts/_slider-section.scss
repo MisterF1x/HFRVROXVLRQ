@@ -7,6 +7,18 @@
       display: flex;
       gap: 24px;
     }
+    &::after {
+      @media screen and (min-width: 768px) {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1px;
+        height: 100%;
+        background-color: var(--primary-color);
+      }
+    }
   }
   &__title {
     font-size: 28px;

@@ -1,6 +1,7 @@
 //-----------FEATURE STYLE
 .feature {
   &__title {
+    position: relative;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -8,25 +9,29 @@
     line-height: 1;
     width: 286px;
     margin: 0 auto;
+    margin-bottom: 96px;
     @media screen and (min-width: 768px) {
       width: 368px;
       font-size: 36px;
+      margin-bottom: 119px;
     }
     @media screen and (min-width: 1280px) {
       width: 495px;
       font-size: 48px;
     }
-  }
-  &__line {
-    width: 1px;
-    height: 48px;
-    margin: 24px auto;
-    background-color: var(--primary-color);
-    @media screen and (min-width: 768px) {
-      height: 87px;
-    }
-    @media screen and (min-width: 768px) {
-      margin: 16px auto;
+    &::after {
+      content: '';
+      width: 1px;
+      height: 48px;
+      background-color: var(--primary-color);
+      position: absolute;
+      top: calc(100% + 24px);
+      left: 50%;
+      transform: translateX(-50%);
+      @media screen and (min-width: 768px) {
+        top: calc(100% + 16px);
+        height: 87px;
+      }
     }
   }
 }

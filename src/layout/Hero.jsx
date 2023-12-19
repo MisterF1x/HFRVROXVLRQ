@@ -1,9 +1,9 @@
+import { useEffect, useRef } from 'react';
+import useResize from '../hooks/useResize';
 import { Button } from '@components/Button';
-import { contactInfo } from '../data/constant';
+import dataJson from '../data/pageData.json';
 import VideoWindmill from '../assets/video/windmill.mp4';
 import VideoWindmillSmall from '../assets/video/windmill_sm.mp4';
-import useResize from '../hooks/useResize';
-import { useEffect, useRef } from 'react';
 
 export const Hero = () => {
   const currentYear = new Date().getFullYear();
@@ -19,14 +19,10 @@ export const Hero = () => {
       <div className="container hero__container">
         <div className="hero__heading">
           <div className="hero__title-wrapper">
-            <h1 className="hero__title">RENEWABLE ENERGY For any task</h1>
+            <h1 className="hero__title">{dataJson?.hero?.title}</h1>
           </div>
           <div className="hero__content">
-            <p>
-              Development and implementation of renewable non-polluting energy
-              sources, generating power generation using energy wind, sun,
-              water, biomass
-            </p>
+            <p>{dataJson?.hero?.content}</p>
             <Button outline href="#cases">
               Learn more
             </Button>
@@ -34,12 +30,12 @@ export const Hero = () => {
         </div>
         <div className="hero__footer">
           <div className="hero__footer-right">
-            <p>{contactInfo.address}</p>
+            <p>{dataJson?.contactInfo.address}</p>
           </div>
           <div className="hero__footer-left">
-            <p>{contactInfo.email}</p>
+            <p>{dataJson?.contactInfo.email}</p>
             <p>
-              {contactInfo.name} © {currentYear}
+              {dataJson?.contactInfo.name} © {currentYear}
             </p>
           </div>
         </div>

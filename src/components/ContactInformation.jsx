@@ -1,27 +1,37 @@
 import { SocialList } from './SocialList';
-import PhoneIcon from '../assets/icons/call.svg?react';
-import MailIcon from '../assets/icons/sms.svg?react';
-import MapIcon from '../assets/icons/map.svg?react';
+import { SpriteIcon } from './SpriteIcon';
+import { formatPhoneNumber } from '../utils/utils';
+import dataJson from '../data/pageData.json';
+import sprite from '../assets/icons/contact-sprite.svg';
 
 export const ContactInformation = () => {
   return (
     <ul className="info-list">
       <li className="info-list__item">
         <p className="info-list__title">Phone:</p>
-        <a className="info-list__link" href="tel:380981234567">
-          <PhoneIcon />
-          38 (098) 12 34 567
+        <a
+          className="info-list__link"
+          href={`tel:${dataJson?.contactInfo?.phone}`}
+        >
+          <SpriteIcon path={sprite} iconName="call" width={24} height={24} />
+          {formatPhoneNumber(dataJson?.contactInfo?.phone)}
         </a>
-        <a className="info-list__link" href="tel:380931234567">
-          <PhoneIcon />
-          38 (093) 12 34 567
+        <a
+          className="info-list__link"
+          href={`tel:${dataJson?.contactInfo?.otherPhone}`}
+        >
+          <SpriteIcon path={sprite} iconName="call" width={24} height={24} />
+          {formatPhoneNumber(dataJson?.contactInfo?.otherPhone)}
         </a>
       </li>
       <li className="info-list__item">
         <p className="info-list__title">Email:</p>
-        <a className="info-list__link" href="mailto:office@ecosolution.com">
-          <MailIcon />
-          office@ecosolution.com
+        <a
+          className="info-list__link"
+          href={`mailto:${dataJson?.contactInfo?.email}`}
+        >
+          <SpriteIcon path={sprite} iconName="sms" width={24} height={24} />
+          {dataJson?.contactInfo?.email}
         </a>
       </li>
       <li className="info-list__item">
@@ -32,10 +42,8 @@ export const ContactInformation = () => {
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
-          <MapIcon />
-          <p className="info-list__address">
-            79005, Ukraine, Lviv street. Shota Rustaveli, 7
-          </p>
+          <SpriteIcon path={sprite} iconName="map" width={24} height={24} />
+          <p className="info-list__address">{dataJson?.contactInfo?.address}</p>
         </a>
       </li>
       <li className="info-list__item">
